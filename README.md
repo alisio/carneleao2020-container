@@ -5,8 +5,8 @@
 O prazo para retificação da Declaração de Ajuste Anual do IRPF é de 5 anos, período
 no qual pode ser necessário utilizar o programa Carnê Leão do ano exercício em questão.
 
-Esta imagem contém a aplicação 'Carnê Leão 2020' possibilita que seu usuário
-informe seus rendimentos e gere o DARF mensal (carnê-leão).
+O programa `Carnê Leão 2020`, distribuído pela Receita Federal do Brasil, ou RFB,
+é utilizado para declaração de rendimentos e geraçãodo DARF mensal (carnê-leão).
 
 Vantagens da utilização do programa Carnê Leão em container:
 * Instalar o aplicativo sem fazer alterações aos seu ambiente java
@@ -38,14 +38,29 @@ programa. O caminho padrão da pasta dos programas da RFB, como o Carnê Leão �
 
 Execute o shell script `instalar.sh` para ums instalação mais simples. Caso prefira
 executar os comandos manualmente, execute o código a seguir no terminal do seu Mac:
+
+### Gerenciador de pacotes `Brew`
 ```sh
-requisitos=("socat" "xquartz")
-[[ ! -f `which brew` ]] && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+### Formulas e Casks do Brew
+
+```sh
+requisitos=("docker" "socat" "xquartz")
 dev_eth='en0'
 for requisito in ${requisitos[@]}; do
   [[ ! -f `which ${requisito}` ]] && brew install $requisito
 done
+```
+
+### Criando a pasta dos documentos da RFB
+```sh
 mkdir -p ${HOME}/Documents/ProgramasRFB
+```
+
+### Construindo a imagem docker
+```sh
+docker build --rm -t alisio/carneleao2020 .
 ```
 
 ## Executando o container
@@ -60,13 +75,13 @@ terminal do seu Mac:
 socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\" &
 ```
 
-### Iniciar o container
+## Inicialização do Container Carnê Leão
 
 Troque o texto `ENDERECO_IP` pelo endereço IP do seu Mac (exemplo: 192.168.0.10)
 e execute o comando:
 ```sh
 docker run  --rm \
-  -e DISPLAY=192.168.0.95:0 \
+  -e DISPLAY=ENDERECO_IP:0 \
   -v ${HOME}/Documents/ProgramasRFB/LEAO2020:/root/ProgramasRFB/LEAO2020 \
   alisio/carneleao2020
 ```
