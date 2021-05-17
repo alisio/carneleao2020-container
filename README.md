@@ -5,8 +5,8 @@
 O prazo para retificação da Declaração de Ajuste Anual do IRPF é de 5 anos, período
 no qual pode ser necessário utilizar o programa Carnê Leão do ano exercício em questão.
 
-O programa `Carnê Leão 2020`, distribuído pela Receita Federal do Brasil, ou RFB,
-é utilizado para declaração de rendimentos e geraçãodo DARF mensal (carnê-leão).
+O programa `Carnê Leão 2020`, desenvolvido pelo SERPRO sob responsabilidade da
+Receita Federal do Brasil, ou RFB, é utilizado para declaração de rendimentos e geraçãodo DARF mensal (carnê-leão).
 
 Vantagens da utilização do programa Carnê Leão em container:
 * Instalar o aplicativo sem fazer alterações aos seu ambiente java
