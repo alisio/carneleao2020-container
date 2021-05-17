@@ -97,6 +97,11 @@ Os testes foram efetuados com sucesso em um Macbook Air com processador intel ro
 * Socat 1.7.4.1
 * XQuartz 2.8.1
 
+## Problemas conhecidos
+
+Arquivos corrompidos ou incorretos podem fazer com que o container não inicialize
+corretamente.
+
 ## Referências
 
 * [Docker: Empowering App Development for Developers](https://www.docker.com/)
