@@ -34,9 +34,24 @@ programa. O caminho padrão da pasta dos programas da RFB, como o Carnê Leão �
 
 * `/Users/alisio/Documents/ProgramasRFB`
 
-## Instalação
+## Modo Easy
+### Instalação: modo Easy
 
-Execute o shell script `instalar.sh` para ums instalação mais simples. Caso prefira
+Execute o shell script de instalação através do comando a seguir:
+```sh
+./instalar.sh
+```
+
+### Executando o container
+
+Execute o shell script de inicialização do container
+```sh
+./carneleao.sh
+```
+
+## Modo Hard
+
+Execute o shell script `instalar.sh` para uma instalação mais simples. Caso prefira
 executar os comandos manualmente, execute o código a seguir no terminal do seu Mac:
 
 ### Gerenciador de pacotes `Brew`
@@ -65,8 +80,7 @@ docker build --rm -t alisio/carneleao2020 https://github.com/alisio/carneleao202
 
 ## Executando o container
 
-Execute o shell script `carneleao2020.sh` para iniciar o container. Caso prefira
-executar os comandos manualmente, inicie o container colando as linhas a seguir no
+Inicie o container colando as linhas a seguir no
 terminal do seu Mac:
 
 ### Iniciar o `socat` em background
@@ -75,7 +89,7 @@ terminal do seu Mac:
 socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\" &
 ```
 
-## Inicialização do Container Carnê Leão
+### Inicialização do container
 
 Troque o texto `ENDERECO_IP` pelo endereço IP do seu Mac (exemplo: 192.168.0.10)
 e execute o comando:
