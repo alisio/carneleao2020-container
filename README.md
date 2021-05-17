@@ -42,7 +42,7 @@ Execute o shell script de instalação através do comando a seguir:
 ./instalar.sh
 ```
 
-### Executando o container
+### Executando o container: modo Easy
 
 Execute o shell script de inicialização do container
 ```sh
@@ -89,7 +89,7 @@ terminal do seu Mac:
 socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\" &
 ```
 
-### Inicialização do container
+### Inicialização do container: modo Hard
 
 Troque o texto `ENDERECO_IP` pelo endereço IP do seu Mac (exemplo: 192.168.0.10)
 e execute o comando:
