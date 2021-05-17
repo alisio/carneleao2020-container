@@ -6,4 +6,4 @@ for requisito in ${requisitos[@]}; do
   [[ ! -f `which ${requisito}` ]] && brew install $requisito
 done
 mkdir -p ${HOME}/Documents/ProgramasRFB
-docker build --rm -t alisio/carneleao2020 .
+docker build --rm -t alisio/carneleao2020 https://github.com/alisio/carneleao2020-container.git

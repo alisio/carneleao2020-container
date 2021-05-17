@@ -60,7 +60,7 @@ mkdir -p ${HOME}/Documents/ProgramasRFB
 
 ### Construindo a imagem docker
 ```sh
-docker build --rm -t alisio/carneleao2020 .
+docker build --rm -t alisio/carneleao2020 https://github.com/alisio/carneleao2020-container.git
 ```
 
 ## Executando o container
