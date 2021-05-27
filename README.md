@@ -41,6 +41,10 @@ Execute o shell script de instalação através do comando a seguir:
 ```sh
 ./instalar.sh
 ```
+Obs. : Pode ser necessário efetuar logoff e logon do seu usuário
+
+
+
 
 ### Executando o container: modo Easy
 
